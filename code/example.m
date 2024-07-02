@@ -25,11 +25,14 @@ H21vva = H21vva(idd,:);
 H21vvb = H21vvb(idd,:);
 I2u = I2u(idd,:);
 I2v = I2v(idd,:);
-detr = J21a(idd,:).*J21d(idd,:)-J21c(idd,:).*J21c(idd,:);
+
 J21a = J21a(idd,:);
 J21b = J21b(idd,:);
 J21c = J21c(idd,:);
 J21d = J21d(idd,:);
+
+detr = J21a(idd,:).*J21d(idd,:)-J21c(idd,:).*J21c(idd,:);
+
 J12a = J12d(idd,:)./detr;
 J12b = -J12b(idd,:)./detr;
 J12c = -J12c(idd,:)./detr;
