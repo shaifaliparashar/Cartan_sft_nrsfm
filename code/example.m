@@ -31,12 +31,12 @@ J21b = J21b(idd,:);
 J21c = J21c(idd,:);
 J21d = J21d(idd,:);
 
-detr = J21a(idd,:).*J21d(idd,:)-J21c(idd,:).*J21c(idd,:);
+detr = J21a.*J21d-J21c.*J21c;
 
-J12a = J12d(idd,:)./detr;
-J12b = -J12b(idd,:)./detr;
-J12c = -J12c(idd,:)./detr;
-J12d = J12a(idd,:)./detr;
+J12a = J21d./detr;
+J12b = -J21b./detr;
+J12c = -J21c./detr;
+J12d = J21a./detr;
 
 iddd = 1:5:1503;
 for i = 1:length(idx)
