@@ -4,7 +4,11 @@ t= 1e-3;
 nC = 40;
 for i = 1: size(u,1)
     
-    q1 = q{1,i};
+    if iscell(q)
+        q1 = q{1,i};
+    else
+        q1 =q;
+    end
     umin=min(u(i,:))-0.1;umax=max(u(i,:))+0.1;
     vmin=min(v(i,:))-0.1;vmax=max(v(i,:))+0.1;
     
